@@ -104,4 +104,14 @@ public class testBulkTransfer
         }
         System.out.println(links);
     }
+
+    @Test
+    public void toPrintFormattedDate()
+    {
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+
+        String formattedDate = dateFormat.format(currentDate);
+        System.out.println("CurrentDate: " + formattedDate);
+    }
 }
