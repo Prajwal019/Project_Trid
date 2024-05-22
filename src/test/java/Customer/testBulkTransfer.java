@@ -13,6 +13,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
 public class testBulkTransfer
 {
     @Test
@@ -124,5 +131,16 @@ public class testBulkTransfer
 
         String formattedDate = dateFormat.format(currentDate);
         System.out.println("CurrentDate: " + formattedDate);
+    }
+
+    @Test
+    public void testAdvanceDate()
+    {
+        LocalDate currentDate = LocalDate.now();
+        LocalDate futureDate = currentDate.plusDays(20);
+        String presentDay = currentDate.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
+        String futureDay = futureDate.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
+        System.out.println(presentDay);
+        System.out.println(futureDay);
     }
 }
