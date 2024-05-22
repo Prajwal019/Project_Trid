@@ -66,7 +66,6 @@ public class testCustomer
             {
                 System.out.println(ch[i] + " : " + count);
             }
-
         }
     }
 }
