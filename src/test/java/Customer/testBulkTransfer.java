@@ -145,6 +145,12 @@ public class testBulkTransfer
     }
 
     @Test
+    public void testSample()
+    {
+        System.out.println("Hello");
+    }
+
+    @Test
     public void testRestrictedAccess()
     {
         System.out.println("Good");
