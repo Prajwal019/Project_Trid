@@ -143,4 +143,10 @@ public class testBulkTransfer
         System.out.println(presentDay);
         System.out.println(futureDay);
     }
+
+    @Test
+    public void testRestrictedAccess()
+    {
+        System.out.println("Good");
+    }
 }
