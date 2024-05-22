@@ -8,6 +8,13 @@ import org.testng.annotations.Test;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -114,6 +121,16 @@ public class testBulkTransfer
             }
         }
         System.out.println(links);
+    }
+
+    @Test
+    public void toPrintFormattedDate()
+    {
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+
+        String formattedDate = dateFormat.format(currentDate);
+        System.out.println("CurrentDate: " + formattedDate);
     }
 
     @Test
