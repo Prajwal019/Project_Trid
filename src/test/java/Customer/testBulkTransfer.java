@@ -149,4 +149,10 @@ public class testBulkTransfer
     {
         System.out.println("Hello");
     }
+
+    @Test
+    public void testRestrictedAccess()
+    {
+        System.out.println("Good");
+    }
 }
