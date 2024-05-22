@@ -32,7 +32,7 @@ public class testBulkTransfer
     }
 
     @Test
-    public void testNumberOcc()
+    public void testNumberOccurence()
     {
         int[] s = {1, 2, 3, 1, 2, 3, 4, 5, 5, 4, 4, 9, 0};
         for (int i = 0; i < s.length; i++)
