@@ -1,6 +1,17 @@
 package Customer;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class testBulkTransfer
 {
@@ -103,5 +114,16 @@ public class testBulkTransfer
             }
         }
         System.out.println(links);
+    }
+
+    @Test
+    public void testAdvanceDate()
+    {
+        LocalDate currentDate = LocalDate.now();
+        LocalDate futureDate = currentDate.plusDays(20);
+        String presentDay = currentDate.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
+        String futureDay = futureDate.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
+        System.out.println(presentDay);
+        System.out.println(futureDay);
     }
 }
